@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+header {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+header .logo {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+header .logo .logo-git {
+    width: 87px;
+    height: 40px;
+}
+header .logo span {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: 600;
+}
+header .toogle-dark {
+    width: 70px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #111;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-right: 30px;
+}
+header .toogle-dark .dark-btn {
+    width: 30px;
+    height: 26px;
+    outline: none;
+    border: none;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 1px solid #444;
+    cursor: pointer;
+    /*filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));*/
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(127, 127, 5);
+}
+main {
+    width: 100vw;
+    display: flex;
+}
+main .section-form, .section-infos {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+}
+main .section-form form {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 525px;
+    height: 307px;
+    background-color: #333;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.35);
+}
+main .section-form form input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 382px;
+    background: none;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+main .section-form form button {
+    width: 293px;
+    height: 42px;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    background: #3737FF;
+    margin-top: 50px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+}
+main .section-infos .smartphone{
+    display: flex;
+    width: 350px;
+    height: 600px;
+    padding: 19px 21px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+}
+main .section-infos .smartphone .screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 345px;
+    height: 592px;
+    border-radius: 30px;
+    border: 1px solid #444;
+}
+main .section-infos .smartphone .screen .cam {
+    width: 10px;
+    height: 10px;
+    margin-top: 10px;
+    border: 1px solid #555;
+    border-radius: 100%;
+}
+main .section-infos .smartphone .screen .redirect-area {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+}
+main .section-infos .smartphone .screen .redirect-area .btn-redirect {
+    margin-right: 30px;
+    width: 55px;
+    height: 45px;
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: #ccc;
+}
+main .section-infos .smartphone .screen .infos {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .section-infos .smartphone .screen .infos img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+main .section-infos .smartphone .screen .infos .name-user {
+    width: 193px;
+    height: 24px;
+    border-radius: 20px;
+    background: #EEE;
+    text-align: center;
+}
+main .section-infos .smartphone .screen .infos .repos {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+main .section-infos .smartphone .screen .infos .repos .repo {
+    width: 293px;
+    height: 60px;
+    margin-right: 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background: #EEE;
+}
+main .section-infos .smartphone .screen .loadingg {
+    top: 2px;
+    left: 20px;
+    position: absolute;
+    border-radius: 5px;
+    height: 5px;
+    display: none;
+    background-color: rgb(10, 223, 10);
+    animation-name: loading;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-delay: -2s;
+    animation-direction: alternate;
+    
+}
+@keyframes loading{
+    from {
+        transform: translateX(0px);
+        width: 0px;
+    }
+    to {
+        transform: translateX(30%);
+        width: 68%;
+    }
+    
+}
+@media(max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    main .section-form, .section-infos {
+        width: 100%;
+    }
+    main .section-form form {
+        width: 80%;
+    }
+    main .section-form form input {
+        width: 80%;
+    }
+    main .section-form form button {
+        width: 80%;
+    }
+    main .section-infos .smartphone {
+        width: 300px;
+    }
+    main .section-infos .smartphone .screen {
+        width: 298px;
+    }
+    main .section-infos .smartphone .screen .infos .repos {
+        width: 90%;
+    }
+    main .section-infos .smartphone .screen .infos .repos .repo {
+        width: 90%;
+    }
+
+}
