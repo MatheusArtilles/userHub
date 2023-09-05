@@ -3,7 +3,11 @@ const urlBase = "https://api.github.com/users";
 const input = document.querySelector("input");
 const form = document.querySelector("form");
 const loading = document.querySelector(".loadingg");
-const link = document.querySelectorAll("a");
+const link = document.querySelectorAll(".link-repo");
+const img = document.querySelector("img");
+const nameUs = document.querySelector(".name-user");
+const btnRedirect = document.querySelector(".btn-redirect");
+
 function getRepos(url) {
     fetch(url)
         .then(response => {
@@ -17,6 +21,7 @@ function getRepos(url) {
             for(let i = 0; i < listResumRepos.length; i++){
                 let li = link[i].children[0];
                 li.innerText = listResumRepos[i].name;
+                li.classList.add("active")
                 link[i].href = `${listResumRepos[i].html_url}`;
             }
         }).catch(err => {
@@ -24,6 +29,9 @@ function getRepos(url) {
         })
 }
 function addToInfosHtml(userName, avatar, urlUser){
+    img.src = `${avatar}`;
+    nameUs.innerText = `@${userName}`;
+    btnRedirect.href = `${urlUser}`
     getRepos(`${urlBase}/${userName}/repos`);
 }
 form.addEventListener("submit", (e)=>{
