@@ -172,13 +172,25 @@ main .section-infos .smartphone .screen .infos .repos {
     align-items: center;
     list-style: none;
 }
+main .section-infos .smartphone .screen .infos .repos a {
+    text-decoration: none;
+}
 main .section-infos .smartphone .screen .infos .repos .repo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: 700;
     width: 293px;
     height: 60px;
     margin-right: 40px;
     margin-top: 20px;
     border-radius: 20px;
     background: #EEE;
+}
+main .section-infos .smartphone .screen .infos .repos .repo.active {
+    background-color: #fff;
+    border: 1px solid #333;
 }
 main .section-infos .smartphone .screen .loadingg {
     top: 2px;
