@@ -1,0 +1,58 @@
+body.dark {
+    background-color: #222;
+}
+body.dark header {
+    border-color: #333;
+}
+body.dark header .logo .logo-git {
+    color: #fff;
+}
+body.dark header .logo span {
+    color: #fff;
+}
+body.dark header .toogle-dark {
+    border-color: aqua;
+    background-color: rgb(25, 209, 209);
+    box-shadow: none;
+}
+body.dark header .toogle-dark .dark-btn {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    transform: translateX(40px);
+}
+body.dark header .toogle-dark .dark-btn .sun {
+    display: none;
+}
+body.dark header .toogle-dark .dark-btn .moon {
+    display: block;
+}
+body.dark main .section-form .form {
+    background: none;
+    border: 1px solid #fff;
+}
+body.dark main .section-infos .smartphone {
+    border-color: #555;
+}
+body.dark main .section-infos .smartphone .screen {
+    border-color: #555;
+}
+body.dark main .section-infos .smartphone .screen .infos img {
+    background: #444;
+    border-color: #ccc;
+}
+body.dark main .section-infos .smartphone .screen .infos .name-user {
+    background-color: #333;
+    color: #fff;
+}
+body.dark main .section-infos .smartphone .screen .infos .name-user.content-true {
+    background: none;
+}
+body.dark main .section-infos .smartphone .screen .infos .repos .repo {
+    background-color: #333;
+    color: #fff;
+}
+body.dark main .section-infos .smartphone .screen .infos .repos .repo.active {
+    background: none;
+    border-color: #444;
+}

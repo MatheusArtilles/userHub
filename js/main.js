@@ -31,6 +31,7 @@ function getRepos(url) {
 function addToInfosHtml(userName, avatar, urlUser){
     img.src = `${avatar}`;
     nameUs.innerText = `@${userName}`;
+    nameUs.classList.add("content-true");
     btnRedirect.href = `${urlUser}`
     getRepos(`${urlBase}/${userName}/repos`);
 }
